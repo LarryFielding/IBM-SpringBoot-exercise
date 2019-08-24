@@ -20,15 +20,13 @@ public class CountriesService implements ICountriesService {
 	}
 
 	@Override
-	public CountryDocument findCountriesById(Integer countryId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<CountryDocument> findCountriesById(String countryId) {
+		return countriesRepository.findById(countryId);
 	}
 
 	@Override
-	public Integer createCountry(CountryDocument country) {
-		// TODO Auto-generated method stub
-		return null;
+	public String createCountry(CountryDocument country) {
+		return countriesRepository.save(country).getId();
 	}
   
   

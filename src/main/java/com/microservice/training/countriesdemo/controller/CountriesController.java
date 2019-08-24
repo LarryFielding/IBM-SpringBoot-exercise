@@ -38,8 +38,8 @@ public class CountriesController {
    * @return País solicitado, null si no encuentra el país.
    */
   @GetMapping(path = "/api/countries/country")
-  public ResponseEntity<CountryDocument> findCountryById(@RequestParam Integer countryId) {
-	  return new ResponseEntity<CountryDocument>(
+  public ResponseEntity<Optional<CountryDocument>> findCountryById(@RequestParam String countryId) {
+	  return new ResponseEntity<Optional<CountryDocument>>(
 		        countriesService.findCountriesById(countryId), HttpStatus.OK);
   }
   
@@ -49,8 +49,8 @@ public class CountriesController {
    * @return Id del país insertado y estatus Http.
    */
   @PostMapping(path="/api/countries/country")
-  public ResponseEntity<Integer> createCountry(@RequestBody CountryDocument country) {
-	  return new ResponseEntity<Integer>(countriesService.createCountry(country), HttpStatus.OK);
+  public ResponseEntity<String> createCountry(@RequestBody CountryDocument country) {
+	  return new ResponseEntity<String>(countriesService.createCountry(country), HttpStatus.OK);
   }
 
 }

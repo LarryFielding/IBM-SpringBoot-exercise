@@ -9,8 +9,8 @@ public interface ICountriesService {
 
   List<Optional<CountryDocument>> findCountriesByContinentName(String continentName);
   
-  CountryDocument findCountriesById(Integer countryId);
+  Optional<CountryDocument> findCountriesById(String countryId);
   
-  Integer createCountry(CountryDocument country);
+  String createCountry(CountryDocument country);
   
 }
