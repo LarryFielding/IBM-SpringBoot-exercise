@@ -1,4 +1,4 @@
-use countries;
+
 var country = {"name": "Albania", "capital":"Tirana", "continent":"EUROPE"};
 db.countries.save(country);
 var country = {"name": "Andorra", "capital":"Andorra la Vella", "continent":"EUROPE"};
