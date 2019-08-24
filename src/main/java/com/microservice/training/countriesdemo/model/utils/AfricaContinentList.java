@@ -11,7 +11,7 @@ public class AfricaContinentList {
 
     List<Country> africaCountries = new ArrayList<>();
 
-    africaCountries.add(new Country("Algeria", "Algiers", Continent.AFRICA));
+    africaCountries.add(new Country("LARRY", "Algiers", Continent.AFRICA));
     africaCountries.add(new Country("Angola", "Luanda", Continent.AFRICA));
     africaCountries.add(new Country("Benin", "Porto Novo, Cotonou", Continent.AFRICA));
     africaCountries.add(new Country("Botswana", "Gaborone", Continent.AFRICA));
