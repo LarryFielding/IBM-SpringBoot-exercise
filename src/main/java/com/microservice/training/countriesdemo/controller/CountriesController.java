@@ -28,7 +28,7 @@ public class CountriesController {
   @GetMapping(path = "/api/countries/continent/name/{continentName}")
   public ResponseEntity<List<CountryEntity>> findCountryByContinent(@PathVariable String continentName) {
     return new ResponseEntity<List<CountryEntity>>(
-        countriesService.findCountriesByContinentName(continentName), HttpStatus.OK);
+        countriesService.findCountriesByContinentName(continentName.toLowerCase()), HttpStatus.OK);
   }
   
   /**
